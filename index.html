@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Ghibli - Buscador de Filmes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Studio Ghibli - Buscar Filmes</h1>
+  </header>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Filmes</a>
+    <a href="#">Sobre</a>
+  </nav>
+
+  <main class="container">
+    <form id="formulario-busca">
+      <input type="text" id="titulo" placeholder="Digite o nome exato do filme..." required />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Studio Ghibli Fan Page</p>
+  </footer>
+
+  <img src="https://upload.wikimedia.org/wikipedia/en/0/02/My_Neighbor_Totoro_-_Totoro.png" id="totoro-fundo" alt="Totoro fofo de fundo" />
+
+  <script src="script.js"></script>
+</body>
+</html>

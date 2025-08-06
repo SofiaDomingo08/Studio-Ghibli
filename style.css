@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Yomogi', cursive;
+  background: linear-gradient(to bottom right, #f5f0e1, #cbe3d9);
+  min-height: 100vh;
+  color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 30px 0 20px;
+  background: none;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2e3a59;
+  text-shadow: 2px 2px 0px #ffffff;
+}
+
+/* Menu com efeito vidro (glassmorphism) */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2e3a59;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #7c83fd;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffffc9;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: floatUp 0.8s ease;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 14px 20px;
+  width: 70%; /* mantém seu tamanho atual */
+  border: none;          /* remove a borda antiga */
+  border-radius: 30px 0 0 30px; /* arredonda só o lado esquerdo */
+  font-size: 18px;
+  box-shadow: inset 0 0 6px #7c83fd;
+  background: #f9f9ff;
+  color: #2e3a59;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #e4e7ff;
+  box-shadow: inset 0 0 10px #5e63ce;
+}
+
+button {
+  padding: 14px 30px;
+  margin-left: 10px; /* mantém o espaçamento que você tinha */
+  background: linear-gradient(135deg, #7c83fd, #5e63ce);
+  border: none;
+  border-radius: 0 30px 30px 0; /* arredonda só o lado direito */
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(124, 131, 253, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5e63ce, #3f43a7);
+  box-shadow: 0 7px 20px rgba(62, 65, 171, 0.8);
+}
+
+.resultado h2 {
+  color: #2e3a59;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #2e3a59;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-erro {
+  color: crimson;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Animações */
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+}
+
+.imagem-filme {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cartaz-filme {
+  animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
